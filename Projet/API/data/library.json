@@ -1,0 +1,51 @@
+{
+    "books": [
+        {
+            "name": "1984",
+            "author": "George Orwell",
+            "id": "231ac800-da86-11e7-b11a-f1a3b541af38",
+            "copies": [
+                {
+                    "submissionDate": "2016/12/06",
+                    "id": "c2da13d0-dabf-11e7-8fb4-b99f7664c177"
+                },
+                {
+                    "submissionDate": "2017/12/07",
+                    "id": "cbfca3b0-dabf-11e7-b993-41ea43809602"
+                },
+                {
+                    "submissionDate": "2017/12/08",
+                    "id": "3e35b560-dac1-11e7-92c1-a1c74e59ace4"
+                }
+            ]
+        },
+        {
+            "name": "La ferme de animaux",
+            "author": "George Orwell",
+            "id": "6cbc92e0-da86-11e7-b397-fd0e15229f62",
+            "copies": []
+        },
+        {
+            "name": "Assassin Apprentice",
+            "author": "Robin Hobb",
+            "publicationDate": "1995",
+            "id": "90091c00-ddd8-11e7-a75e-7f7cd01ab94e",
+            "copies": []
+        }
+    ],
+    "users": [
+        {
+            "name": "Adrien",
+            "age": 18,
+            "id": "2b793500-dabc-11e7-96d9-3f4994e35ed5"
+        }
+    ],
+    "loans": [
+        {
+            "userId": "2b793500-dabc-11e7-96d9-3f4994e35ed5",
+            "copyId": "3e35b560-dac1-11e7-92c1-a1c74e59ace4",
+            "loanDate": "2017/12/07",
+            "id": "33d16140-dac2-11e7-a2f4-494b3ae468c5"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+**/soap-demo/.vs
+**/soap-demo/bin
+**/soap-demo/obj
+**/.suo
+**/node_modules
+debug.log

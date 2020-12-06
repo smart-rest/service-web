@@ -1,0 +1,40 @@
+<div class="modal-header">
+  <h5 class="modal-title">Choose a user</h5>
+  <button
+    type="button"
+    class="close"
+    data-dismiss="modal"
+    aria-label="Close"
+    (click)="onCloseIconClicked()"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <select
+    *ngIf="users$ | async as users"
+    [(ngModel)]="selectedUser"
+  >
+    <option [ngValue]="undefined"></option>
+    <option
+      *ngFor="let user of users"
+      [ngValue]="user"
+    >
+      {{user.name}}
+    </option>
+  </select>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="onValidateClicked()"
+    [disabled]="!selectedUser"
+  >Validate</button>
+  <button
+    type="button"
+    class="btn btn-secondary"
+    data-dismiss="modal"
+    (click)="onCancelClicked()"
+  >Cancel</button>
+</div>

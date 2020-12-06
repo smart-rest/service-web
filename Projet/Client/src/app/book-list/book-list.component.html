@@ -1,0 +1,36 @@
+<button
+  class="btn btn-primary mb-3"
+  (click)="init()"
+>Refresh</button>
+<div
+  class="row"
+  *ngIf="books$ | async as books"
+>
+  <div
+    *ngFor="let book of books"
+    class="col-lg-6"
+  >
+    <div class="card mb-3">
+      <h4 class="card-header">
+        {{book.name}}
+      </h4>
+      <div class="card-body">
+        <h5 class="card-title">Author</h5>
+        <p class="card-text">{{book.author}}</p>
+        <h5
+          class="card-title"
+          *ngIf="book.publicationDate"
+        >Publication date</h5>
+        <p
+          class="card-text"
+          *ngIf="book.publicationDate"
+        >{{book.publicationDate}}</p>
+        <a
+          [routerLink]="'/books/' + book.id + '/loan'"
+          class="btn btn-outline-primary"
+          [ngClass]="{'disabled': book.copies.length === 0}"
+        >Burrow</a>
+      </div>
+    </div>
+  </div>
+</div>

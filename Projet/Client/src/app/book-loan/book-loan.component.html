@@ -1,0 +1,36 @@
+<div *ngIf="book$ | async as book">
+  <h1>{{book.name}}</h1>
+  <p class="text-muted">{{book.author}}</p>
+  <div
+    *ngIf="copies$ | async as copies"
+    class="card mb-3"
+  >
+    <h4 class="card-header">Copies</h4>
+    <ul class="list-group list-group-flush">
+      <li
+        class="list-group-item"
+        *ngFor="let copy of copies"
+      >
+        <h5 class="card-title">Submission date</h5>
+        <p class="card-text">{{copy.submissionDate}}</p>
+        <button
+          class="btn btn-primary"
+          (click)="loan(copy.id)"
+        >Burrow</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<footer>
+  <a
+    routerLink="/books"
+    class="btn btn-secondary"
+  >Back</a>
+</footer>
+<ngx-smart-modal
+  #loanModal
+  identifier="loanModal"
+  [closable]="false"
+>
+  <app-user-selection (close)="onClosed($event)"></app-user-selection>
+</ngx-smart-modal>

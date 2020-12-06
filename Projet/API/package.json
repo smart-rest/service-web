@@ -1,0 +1,25 @@
+{
+  "name": "nantes-library",
+  "version": "1.0.0",
+  "description": "My first API",
+  "main": "./src/server.js",
+  "repository": "https://github.com/smart-rest/Restful-API.git",
+  "author": "Adrien Buet <adrien.buet@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon --inspect ./src/server.js",
+    "start": "node ./src/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "node-json-db": "^1.1.0",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
