@@ -14,8 +14,8 @@ La première partie du TP peut être effectuée depuis un navigateur (requêtes 
 
 ## Authentification
 
-Les étapes suivantes devront être faites en étant authentifié. Utiliser les Bearer Token `95bfe24a04e78dde78e7c5a314949b1e08348d81`
-> astuce: Utilisez le header HTTP *Authorization* avec la valeur *Bearer 95bfe24a04e78dde78e7c5a314949b1e08348d81* ou renseigner l'onglet *Authorization* avec le type *Bearer Token* et la valeur du Token.
+Les étapes suivantes devront être faites en étant authentifié. Utiliser les Bearer Token `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`
+> astuce: Utilisez le header HTTP *Authorization* avec la valeur *Bearer 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* ou renseigner l'onglet *Authorization* avec le type *Bearer Token* et la valeur du Token.
 
 - Récupérer les informations de l'utilisateur courant. Quel est son login ?
 - Modifer la localisation de l'utilisateur courant
