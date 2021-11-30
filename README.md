@@ -15,7 +15,7 @@ Vous aurez besoin des outils suivants pour réaliser les TPs
 * un outil pour effectuer des requêtes HTTP avancées. Voici des exemples d'outils gratuits
   * [Postman](https://www.postman.com/downloads/)
   * [Insomnia](https://insomnia.rest/download/)
-* [NodeJS](https://nodejs.org/en/download/) en version LTS (14.15.1)
+* [NodeJS](https://nodejs.org/en/download/) en version LTS (16.13.0)
 * Un outil de développement pour Javascript
   * ex: [Visual Studio Code](https://code.visualstudio.com/)
 
