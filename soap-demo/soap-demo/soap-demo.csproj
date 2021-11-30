@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <RootNamespace>soap_demo</RootNamespace>
   </PropertyGroup>
 
@@ -14,11 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <WCFMetadata Include="Connected Services" />
+    <Folder Include="Connected Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Connected Services\" />
+    <None Include="App.config" />
   </ItemGroup>
 
 </Project>
