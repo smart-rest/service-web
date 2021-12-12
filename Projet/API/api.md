@@ -174,7 +174,7 @@ Essayez de faire une requête GET et POST sur l'URL `localhost:3000/users`. L'im
 
 Avant de commencer, si votre serveur est toujours lancé, arrêtez le. Vous allez ensuite le relancer avec la commande `npm run dev`. Cette commande lance le serveur comme précédemment mais ajoute également un "watcher" sur votre code. A chaque modification de celui-ci, le serveur sera relancé. Cela permet à votre serveur d'être tout le temps à jour avec vos dernières modifications.
 
-#### Repository
+#### Repository X
 
 Créez un fichier `userRepository.js` dans le dossier repositories. Implémentez les fonctionnalités nécessaires en vous inspirant de `bookRepository.js`. Dans la base de données, les utilisateurs devront être créés dans `/users` au lieu de `/books`. Vous pouvez également vérifier que les utilisateurs ont bien un nom (`name`) ainsi qu'un age (`age`).
 
