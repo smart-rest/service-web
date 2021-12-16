@@ -28,6 +28,7 @@ class CopyRepository {
 
     add(bookId) {
         copy.id = uuid();
+        copy.booKId = booKId;
         copy.submissionDate = new Date().toDateString(); // Today
         this.db.push("/books[" + bookId + "]/copies", copy);
 
