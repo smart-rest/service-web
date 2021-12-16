@@ -19,7 +19,9 @@ class UserRepository {
     add(user) {
         checkUser(user);
         user.id = uuid();
-        this.db.push("/users[]", user)
+        this.db.push("/users[]", user);
+
+        return user;
     }
 
     get(id) {
