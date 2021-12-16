@@ -11,7 +11,6 @@ class CopyRepository {
         if (bookPath == null) {
             throw new ValidationError('This book does not exists')
         }
-
         return this.db.getData(bookPath + '/copies');
     }
 

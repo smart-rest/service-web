@@ -1,21 +1,21 @@
 class CopyController {
-    constructo(copyRepository) {
+    constructor(copyRepository) {
         this. copyRepository = copyRepository;
     }
 
     getAll(req, res) { 
-        const copies = this.copyRepository.getAll();
+        const copies = this.copyRepository.getAll(req.params.bookId);
         res.json(copies);
     }
 
     create(req, res) {
         const copy = this.copyRepository.add(req.body);
-        res.location('/books[' + copy.bookId + ']/copies/' + copy.id);
+        res.location('/books[' + copy.bookId + ']/copies/' + copy.copyId);
         res.status(201).send(copy);
     }
 
     get(req, res) {
-        const copy = this.copyRepository.get(req.params.id);
+        const copy = this.copyRepository.get(req.params.copyId);
         if (copy == null) {
             res.status(404).send(null);
         } else {
@@ -29,7 +29,7 @@ class CopyController {
     }
 
     delete(req, res) {
-        this.copyRepository.delete(req.params.id);
+        this.copyRepository.delete(req.params.copyId);
         res.status(204).send(null);
     }
 }
