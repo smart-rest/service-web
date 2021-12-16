@@ -186,7 +186,7 @@ Créez un fichier `userController.js` dans le dossier controllers. Implémenter 
 
 Modifiez le fichier `userRoutes.js` dans le dossier routes. L'API doit gérer les opérations définies précédemment en se servant du controlleur d'utilisateurs.
 
-#### server.js
+#### server.js X
 
 Importez les fonctionnalités ci-dessus.
 
@@ -204,7 +204,7 @@ const userController = new UserController(userRepository);
 
 Et enfin, modifiez la ligne qui configure les routes en vous servant de ce controlleur.
 
-#### Utilisation
+#### Utilisation X 
 
 Utilisez Postman pour créer votre utilisateur. Il devra avoir les propriétés `name`, `age`.
 
