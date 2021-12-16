@@ -178,11 +178,11 @@ Avant de commencer, si votre serveur est toujours lancé, arrêtez le. Vous alle
 
 Créez un fichier `userRepository.js` dans le dossier repositories. Implémentez les fonctionnalités nécessaires en vous inspirant de `bookRepository.js`. Dans la base de données, les utilisateurs devront être créés dans `/users` au lieu de `/books`. Vous pouvez également vérifier que les utilisateurs ont bien un nom (`name`) ainsi qu'un age (`age`).
 
-#### Controller
+#### Controller X
 
 Créez un fichier `userController.js` dans le dossier controllers. Implémenter les fonctionnalités en vous inspirant de `bookController.js` et en utilisant le répertoire d'utilisateurs.
 
-#### Routes
+#### Routes X
 
 Modifiez le fichier `userRoutes.js` dans le dossier routes. L'API doit gérer les opérations définies précédemment en se servant du controlleur d'utilisateurs.
 

@@ -9,14 +9,16 @@ const bookRoutes = require('./api/routes/bookRoutes');
 const userRoutes = require('./api/routes/userRoutes');
 
 const BookController = require('./api/controllers/bookController');
-
+const UserController = require('./api/controllers/userController');
+const UserRepository = require('./repositories/userRepository');
 const BookRepository = require('./repositories/bookRepository');
 
 // Création de nos objets
 const db = new JsonDB("./data/library", true, true);
 const bookRepository = new BookRepository(db);
 const bookController = new BookController(bookRepository);
-/* A compléter */
+const userRepository = new UserRepository(db);
+const userController = new UserController(userRepository);
 
 // Création du serveur
 const app = express();
@@ -25,9 +27,8 @@ app.use(cors());
 
 // Configuration des routes
 bookRoutes(app, bookController);
-userRoutes(app, null /* A modifier */);
+userRoutes(app, userController);
 /* A compléter */
-
 
 function errorHandler(err, req, res, next) {
     console.error(err);
