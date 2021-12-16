@@ -1,4 +1,6 @@
-const ValidationError = require("./validationError");
+const { v4: uuid } = require('uuid');
+const _ = require('lodash');
+const ValidationError = require('./validationError');
 
 class CopyRepository {
     constructor(db, bookRepository) {
@@ -25,24 +27,23 @@ class CopyRepository {
         return bookPath +'/copies[' + index + ']';
     }
 
-    add(bookId) {
+    add(bookId, copy) {
         copy.id = uuid();
-        copy.booKId = booKId;
-        copy.submissionDate = new Date().toDateString(); // Today
-        this.db.push("/books[" + bookId + "]/copies", copy);
-
-        console.log(copy);
+        const bookIndex = this.bookRepository.getIdPath(bookId);
+        
+        console.log("Debug : " + bookIndex);
+        this.db.push(bookIndex + "/copies[]", copy);
 
         return copy;
     }
     
-    get(bookId) {
-        const copies = this.getAll();
-        return _.find(copies, { bookId });
+    get(bookId, id) {
+        const copies = this.getAll(bookId);
+        return _.find(copies, { id });
     }
 
-    update(bookId, copy) {
-        if (copy.id !== bookId)
+    update(bookId, id, copy) {
+        if (copy.id !== id)
             throw new ValidationError('You cannot change the id.');
 
         const path = this.getIdPath(bookId);
@@ -52,8 +53,8 @@ class CopyRepository {
         this.db.push(path, copy);
     }
 
-    delete(bookId) {
-        const path = this.getIdPath(bookId);
+    delete(bookId, id) {
+        const path = this.getIdPath(bookId, id);
         if (path != null)
             this.db.delete(path);
     }
