@@ -15,13 +15,15 @@ import { UserService } from './services/user.service';
 import { UserSelectionComponent } from './user-selection/user-selection.component';
 import { BookLoanComponent } from './book-loan/book-loan.component';
 import { LoanService } from './services/loan.service';
+import { LoanListComponent } from './loan-list/loan-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     BookLoanComponent,
-    UserSelectionComponent
+    UserSelectionComponent,
+    LoanListComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,13 @@ import { BaseHttpService } from './baseHttpService';
 @Injectable()
 export class CopyService extends BaseHttpService {
   getAvailable(bookId: string): Observable<Copy[]> {
-    /*To be implemented*/
-    return of([new Copy('myId', '2018-01-01')]);
+    return this.http
+      .get<Copy[]>(`${this.baseUrl}/books/${bookId}/availableCopies`);
+
+  }
+
+  getAll(bookId: string): Observable<Copy[]> {
+    return this.http
+      .get<Copy[]>(`${this.baseUrl}/books/${bookId}/copies`);
   }
 }
